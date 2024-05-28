@@ -22,4 +22,18 @@ public class CalculadoraTest {
         assertEquals(6.0, calc.multiplicar(2.0, 3.0), 1e-3);
     }
 
+    @Test
+    public void testDividir() {
+        Calculadora calc = new Calculadora();
+        assertEquals(2.0, calc.dividir(6.0, 3.0), 1e-3);
+    }
+
+    @Test
+    public void testDividirPorCero() {
+        Calculadora calc = new Calculadora();
+        assertThrows(ArithmeticException.class, () -> {
+            calc.dividir(1.0, 0);
+        });
+    }
+
 }
