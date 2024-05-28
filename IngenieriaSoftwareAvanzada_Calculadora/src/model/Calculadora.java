@@ -12,5 +12,11 @@ public class Calculadora {
         return a * b;
     }
 
+    public double dividir(double a, double b) {
+        if (b == 0) {
+            throw new ArithmeticException("No se puede dividir por cero");
+        }
+        return a / b;
+    }
     
 }
