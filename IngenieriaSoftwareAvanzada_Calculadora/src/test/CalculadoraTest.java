@@ -36,4 +36,16 @@ public class CalculadoraTest {
         });
     }
 
+    @Test
+    public void testRaizCuadrada() {
+        Calculadora calc = new Calculadora();
+        assertEquals(2.0, calc.raizCuadrada(4.0), 1e-3);
+    }
+
+    @Test
+    public void testExponencial() {
+        Calculadora calc = new Calculadora();
+        assertEquals(Math.exp(1.0), calc.exponencial(1.0), 1e-3);
+    }
+
 }
